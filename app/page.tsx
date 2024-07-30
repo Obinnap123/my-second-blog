@@ -1,95 +1,88 @@
-import Image from "next/image";
+import Image from "@/public/logo.png";
 import styles from "./page.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import style from './page.module.css';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+      <div className={styles.reset}>
+      <nav className={styles.navbar}>
+      <div className={styles.navdiv}>
+      <img src="/logo.png" alt="logo" className={styles.logo}/>
+                <ul>
+                 <li className={styles.listItem}><a href="#" className={styles.navLink}>Home</a></li>
+                    <li className={styles.listItem}><a href="#" className={styles.navLink}>Packages</a></li>
+                    <li className={styles.listItem}><a href="#" className={styles.navLink}>Testimonoial</a></li>
+                    <li className={styles.listItem}><a href="#" className={styles.navLink}>Offers</a></li>
+                    <button className={styles.signup}><a href="#" className={styles.items}>sign up</a></button>
+                <button className={styles.login}><a href="#" className={styles.items2}>Login</a></button>
+                </ul>
+                  </div> 
+                  </nav>
+                  </div>
+                    {/* <div className={styles.container}>
+                  <div className={styles.container2}>
+                  <h1>Earn over <span>$500</span> Monthly</h1>
+                  <h2>Learn and Earn</h2>
+                  <div className="my-span">Become Our Language Ambassador</div><br/>
+                  <p>Our online education platform is fully fuctionaly learning place consiting of vital class,e-library, testing/assessment modus and others. it is an interactive medium where student can engage the teachers just from the comfort of their home.</p>
+                  <button className="my-button">
+                      <a href="#">Join Now </a>
+                      <img src="images/arrow.png" alt="Arrow" />
+                  </button>
+                  </div>
+                  <img src="images/girl.png" alt="girl"></img>
+              </div> */}
+              <footer className={styles.footer}>
+                <div className={styles.row}>
+                <img src="/logo.png" alt="logo" className={styles.logo2}/>
+                </div>
+                <div className={styles.col}>
+                  <ul >
+                    <li className={styles.listItem2}>
+                      <a href="#" className={styles.links}>About Us</a>
+                    </li>
+                    <li className={styles.listItem2}>
+                      <a href="#" className={styles.links}>Responsibilities</a>
+                    </li>
+                    <li className={styles.listItem2}>
+                      <a href="#" className={styles.links}>Our Service</a>
+                    </li>
+                    <li className={styles.listItem2}>
+                      <a href="#" className={styles.links}>Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className={styles.col}>
+                  <ul className={styles.listItem2}>
+                    <li className={styles.listItem2}>
+                      <a href="#" className={styles.links}>Disclaimer</a>
+                    </li>
+                    <li className={styles.listItem2}>
+                      <a href="#" className={styles.links}>Testimonials</a>
+                    </li>
+                    <li className={styles.listItem2}>
+                      <a href="#" className={styles.links}>Privacy policy</a>
+                    </li>
+                    <li className={styles.listItem2}>
+                      <a href="#" className={styles.links}>Terms of Service</a>
+                    </li>
+                  </ul>
+                  </div>
+                    <div className={styles.socialIcons}>
+        <FontAwesomeIcon icon={faFacebookF} />
+        <FontAwesomeIcon icon={faInstagram} />
+        <FontAwesomeIcon icon={faTwitter} />
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
-}
+              </footer>
+              </main>
+                  );
+                  }
+                  
+                  
+                  
+              
+              
+          
